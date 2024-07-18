@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/51947a1d61.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container px-5 my-5" >
+        <div class="card">
+            <div class="card-header">
+              Payment form example
+            </div>
+            <div class="card-body">
+                <div class="alert alert-danger" role="alert">
+                 Some fiels are missing!
+                  </div>
+
+                  <div class="d-flex justify-content-between">
+                    <div class="mb-3">
+                        <fieldset style="border:1px solid #999; padding:6px;">
+                            <label class="form-label" for="card">Card #</label>
+                            <input class="form-control" size=40 id="card" type="text" placeholder="XXXXXXXXXXXXXXXX" data-sb-validations="required" />
+                            <div class="invalid-feedback" data-sb-feedback="card:required">Card # is required.</div>
+                        </fieldset>
+                    </div>
+                    <div class="mb-3">
+                        <fieldset style="border:1px solid #999; padding:6px;">
+                            <label class="form-label" for="cvc">CVC #</label>
+                            <input class="form-control"  size=40 id="cvc" type="text" placeholder="0000" data-sb-validations="required" />
+                            <div class="invalid-feedback" data-sb-feedback="cvc:required">CVC # is required.</div>
+                        </fieldset>    
+                    </div>
+                    <div class="mb-3">
+                        <fieldset style="border:1px solid #999; padding:6px;">
+                            <label class="form-label" for="amount">Amount</label>
+                            <input class="form-control" size=40 id="amount" type="text" placeholder="Amount" data-sb-validations="required" />
+                            <div class="invalid-feedback" data-sb-feedback="amount:required">Amount is required.</div>
+                        </fieldset>
+                    </div>
+                </div>    
+            </div>
+            <div class="fl-name d-flex justify-content-between">
+                <div class="f-name">
+                    <fieldset class="mb-3" style="border:1px solid #999; padding:6px;">
+                        <div class="mb-3">
+                            <label class="form-label" for="firstName">First Name</label>
+                            <input class="form-control" size=50 id="firstName" type="text" placeholder="" data-sb-validations="required" />
+                            <div class="invalid-feedback" data-sb-feedback="firstName:required">First Name is required.</div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="mb-3" style="border:1px solid #999; padding:6px;">
+                    <div class="mb-3">
+                        <label class="form-label" for="City">City</label>
+                        <input class="form-control" size=60 id="lastName" type="text" placeholder="" data-sb-validations="required" />
+                        <div class="invalid-feedback" data-sb-feedback="lastName:required">Last Name is required.</div>
+                    </div>
+                    </fieldset>
+                    <fieldset class="mb-3" style="border:1px solid #999; padding:6px;">
+                        <div class="credit-type">
+                            <p>We accept:</p>
+                            <form action="/action_page.php">
+                                <div class="bg-secondary">
+                                    <input type="radio" id="html" name="fav_language" value="HTML">
+                                    <i class="fa-brands fa-cc-mastercard"></i>
+                                    <input type="radio" id="css" name="fav_language" value="CSS">
+                                    <i class="fa-brands fa-cc-visa"></i>
+                                    <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                                    <i class="fa-brands fa-cc-mastercard"></i>
+                                    <input type="radio" id="css" name="fav_language" value="CSS">
+                                    <i class="fa-brands fa-cc-visa"></i>
+                                </div>
+                            </form> 
+                        </div>
+                    </fieldset>
+                </div> 
+                <div class="l-name">
+                    <fieldset class="mb-3" style="border:1px solid #999; padding:6px;">
+                        <div class="mb-3">
+                            <label class="form-label" for="city">Last Name</label>
+                            <input class="form-control" size=60 id="city" type="text" placeholder="" data-sb-validations="required" />
+                            <div class="invalid-feedback" data-sb-feedback="city:required">City is required.</div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="mb-3" style="border:1px solid #999; padding:6px;">
+                        <div class="address d-flex justify-content-between">
+                            <div class="mb-3">
+                                <label class="form-label" for="state">State</label>
+                                <select class="form-select" style="width: 140px;" id="state" aria-label="State">
+                                    <option value="Pick A State">Pick A State</option>
+                                    <option value="Texas">Texas</option>
+                                    <option value="New York">New York</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="postalCode">Postal Code</label>
+                                <input class="form-control" id="postalCode" type="text" placeholder="" data-sb-validations="required" />
+                                <div class="invalid-feedback" data-sb-feedback="postalCode:required">Postal Code is required.</div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="mb-3">
+                        <label class="form-label" for="message">Message</label>
+                        <textarea class="form-control" id="message" type="text" placeholder="" style="height: 10rem;" data-sb-validations="required"></textarea>
+                        <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
+                        <div id="emailHelp" class="form-text">Add any here</div>
+                    </div>
+                </div>
+            </div>
+                <div class="d-none" id="submitErrorMessage">
+                    <div class="text-center text-danger mb-3">Error sending message!</div>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <button class="btn btn-secondary btn-lg disabled" id="submitButton" type="submit">Cancel</button>
+                    <button class="btn btn-primary btn-lg disabled ms-2" id="submitButton" type="submit">Send</button>
+                </div>
+        </form>
+            <div class="card-footer text-body-secondary">
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+
+
+
+
+
+       </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
